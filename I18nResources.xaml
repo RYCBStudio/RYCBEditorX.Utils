@@ -1,0 +1,75 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <!--  Global  -->
+    <s:String x:Key="Global.Yes">Yes</s:String>
+    <s:String x:Key="Global.No">No</s:String>
+    <s:String x:Key="Global.OK">OK</s:String>
+    <s:String x:Key="Global.Cancel">Cancel</s:String>
+
+    <!--  Main  -->
+    <s:String x:Key="Main.Menu.File">_File</s:String>
+    <s:String x:Key="Main.Menu.File.New">_New</s:String>
+    <s:String x:Key="Main.Menu.File.New.File">_File</s:String>
+    <s:String x:Key="Main.Menu.File.New.Project">_Project</s:String>
+    <s:String x:Key="Main.Menu.File.Open">_Open</s:String>
+    <s:String x:Key="Main.Menu.File.Save">_Save</s:String>
+    <s:String x:Key="Main.Menu.File.SaveAs">Save As</s:String>
+    <s:String x:Key="Main.Menu.Edit">_Edit</s:String>
+    <s:String x:Key="Main.Menu.Edit.Undo">_Undo</s:String>
+    <s:String x:Key="Main.Menu.Edit.Redo">_Redo</s:String>
+    <s:String x:Key="Main.Menu.Edit.Cut">_Cut</s:String>
+    <s:String x:Key="Main.Menu.Edit.Paste">_Paste</s:String>
+    <s:String x:Key="Main.Menu.Edit.Copy">Co_py</s:String>
+    <s:String x:Key="Main.Menu.Edit.CSL">Comment Selected Lines</s:String>
+    <s:String x:Key="Main.Menu.Edit.USL">Uncomment Selected Lines</s:String>
+    <s:String x:Key="Main.Menu.Edit.GL">Go to Line</s:String>
+    <s:String x:Key="Main.Menu.Options">_Options</s:String>
+    <s:String x:Key="Main.Menu.Options.Settings">_Settings</s:String>
+    <s:String x:Key="Main.Menu.Tools">_Tools</s:String>
+    <s:String x:Key="Main.Menu.Tools.App">_Application</s:String>
+    <s:String x:Key="Main.Menu.Tools.App.Restart">_Restart</s:String>
+    <s:String x:Key="Main.Menu.Tools.App.Exit">_Exit</s:String>
+    <s:String x:Key="Main.Menu.Tools.App.MessageTest">_Message Test</s:String>
+    <s:String x:Key="Main.Menu.Tools.App.ThrowEx">_Throw an Exception</s:String>
+    <s:String x:Key="Main.Menu.Tools.packagemgmt">Manage _Packages of</s:String>
+    <s:String x:Key="Main.Menu.Tools.packagemgmt.py">P_ython</s:String>
+    <s:String x:Key="Main.Menu.Tools.packagemgmt.ide">_IDE</s:String>
+    <s:String x:Key="Main.Menu.Help">_Help</s:String>
+    <s:String x:Key="Main.Menu.Help.About">_About</s:String>
+    <s:String x:Key="Main.Menu.Help.LC">Licenses and _Copyrights</s:String>
+    <s:String x:Key="Main.Menu.Help.tbox">_Treasure Box</s:String>
+
+    <s:String x:Key="Main.SideBar.Notifications.Title">Notifications</s:String>
+    <s:String x:Key="Main.SideBar.Project.Title">Project Management</s:String>
+    <s:String x:Key="Main.SideBar.Struct.Title">File Structure</s:String>
+    <s:String x:Key="Main.SideBar.Pylint.Title">Pylint Settings</s:String>
+
+    <s:String x:Key="Main.Bottom.Errors">Errors</s:String>
+    <s:String x:Key="Main.Bottom.Console">Console</s:String>
+    <s:String x:Key="Main.Bottom.HPs">Highlight Profiles</s:String>
+    <s:String x:Key="Main.Bottom.CHL">Current Highlighting Profile:</s:String>
+    <s:String x:Key="Main.Bottom.FileSavingTip">Saving File:</s:String>
+    <s:String x:Key="Main.Bottom.FileSavingTip.Success">Success.</s:String>
+    <s:String x:Key="Main.Bottom.FileSavingTip.Fail">Fail. Please check log.</s:String>
+
+
+    <!--  File Creator  -->
+    <s:String x:Key="FC.Title">Enter your file name:</s:String>
+
+
+    <!--  GotoLine  -->
+    <s:String x:Key="GL.Title">Go to Line: (enter line number)</s:String>
+
+
+    <!--  Runner Profile Config  -->
+    <s:String x:Key="RPC.Title">Run Profile Config</s:String>
+    <s:String x:Key="RPC.Property.Name">Profile Name</s:String>
+    <s:String x:Key="RPC.Property.Location">Script Location</s:String>
+    <s:String x:Key="RPC.Property.Itpr">Interpreter</s:String>
+    <s:String x:Key="RPC.Property.ItprArgs">Interpreter Arguments</s:String>
+    <s:String x:Key="RPC.Property.ScriptArgs">Script Arguments</s:String>
+    <s:String x:Key="RPC.Property.UseBPSR">Use Built-in Python Script Runner</s:String>
+
+</ResourceDictionary>
