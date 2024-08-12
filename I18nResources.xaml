@@ -8,6 +8,7 @@
     <s:String x:Key="Global.OK">OK</s:String>
     <s:String x:Key="Global.Cancel">Cancel</s:String>
 
+
     <!--  Main  -->
     <s:String x:Key="Main.Menu.File">_File</s:String>
     <s:String x:Key="Main.Menu.File.New">_New</s:String>
@@ -45,6 +46,7 @@
     <s:String x:Key="Main.SideBar.Project.Title">Project Management</s:String>
     <s:String x:Key="Main.SideBar.Struct.Title">File Structure</s:String>
     <s:String x:Key="Main.SideBar.Pylint.Title">Pylint Settings</s:String>
+    <s:String x:Key="Main.SideBar.Wiki.Title">Wiki</s:String>
 
     <s:String x:Key="Main.Bottom.Errors">Errors</s:String>
     <s:String x:Key="Main.Bottom.Console">Console</s:String>
@@ -61,6 +63,16 @@
 
     <!--  GotoLine  -->
     <s:String x:Key="GL.Title">Go to Line: (enter line number)</s:String>
+    
+    <!--Wiki-->
+    <s:String x:Key="W.Keyword">Keyword</s:String>
+    <s:String x:Key="W.Func">Function</s:String>
+    <s:String x:Key="W.Pkg">Package</s:String>
+    <s:String x:Key="W.Doc">Documention</s:String>
+    <s:String x:Key="W.Comment">Comments</s:String>
+    <s:String x:Key="W.Comment.Watermark">Leave your comment...</s:String>
+    <s:String x:Key="W.Keyword">Keyword</s:String>
+    <s:String x:Key="W.Keyword">Keyword</s:String>
 
 
     <!--  Runner Profile Config  -->

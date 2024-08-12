@@ -15,6 +15,8 @@ public class LogUtil
     {
         {EnumLogModule.MAIN, "主程序" },
         {EnumLogModule.UPDATE, "更新" },
+        {EnumLogModule.NET, "网络" },
+        {EnumLogModule.SQL, "SQL" },
         {EnumLogPort.CLIENT, "客户端" },
         {EnumLogPort.SERVER, "服务端" },
         {EnumLogType.INFO, "信息" },
@@ -95,6 +97,8 @@ public enum EnumLogModule
 {
     MAIN,
     UPDATE,
+    NET,
+    SQL,
     CUSTOM
 }
 public enum EnumLogType

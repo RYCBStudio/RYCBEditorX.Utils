@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace RYCBEditorX.Utils;
-internal static class Extensions
+public static class Extensions
 {
     public static bool IsNullOrEmptyEx(this string value)
     {
