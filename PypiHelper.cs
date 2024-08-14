@@ -17,6 +17,7 @@ public static class PypiHelper
         var names = new List<string>();
         var descs = new List<string>();
         var vers = new List<string>();
+        if (linkNodes is null) { return (null, "0"); }
         foreach (var linkNode in linkNodes)
         {
             var link = linkNode.GetDirectInnerText();
@@ -106,6 +107,10 @@ public static class PypiHelper
 
     public static List<GeneralPackageInfo> ConvertToClass(Dictionary<string, List<string>> res)
     {
+        if (res == null)
+        {
+            return [];
+        }
         List<GeneralPackageInfo> ret = new(res["name"].Count);
         var i = 0;
 

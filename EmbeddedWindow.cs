@@ -66,8 +66,10 @@ public class EmbeddedWindow : HwndHost, IKeyboardInputSink
         screenH = sH;
         screenW = sW;
         appPath = p;
-        WinInfo = new WindowInfo();
-        WinInfo.winTitle = f;
+        WinInfo = new WindowInfo
+        {
+            winTitle = f
+        };
     }
 
     public EmbeddedWindow(Border b, double sW, double sH, ProcessStartInfo p, string f)
@@ -76,8 +78,10 @@ public class EmbeddedWindow : HwndHost, IKeyboardInputSink
         screenH = sH;
         screenW = sW;
         processStartInfo = p;
-        WinInfo = new WindowInfo();
-        WinInfo.winTitle = f;
+        WinInfo = new WindowInfo
+        {
+            winTitle = f
+        };
     }
     protected override HandleRef BuildWindowCore(HandleRef hwndParent)
     {

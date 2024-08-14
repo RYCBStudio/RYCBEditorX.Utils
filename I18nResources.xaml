@@ -5,7 +5,7 @@
     <!--  Global  -->
     <s:String x:Key="Global.Yes">Yes</s:String>
     <s:String x:Key="Global.No">No</s:String>
-    <s:String x:Key="Global.OK">OK</s:String>
+    <s:String x:Key="Global.Ok">OK</s:String>
     <s:String x:Key="Global.Cancel">Cancel</s:String>
 
 
@@ -34,13 +34,13 @@
     <s:String x:Key="Main.Menu.Tools.App.Exit">_Exit</s:String>
     <s:String x:Key="Main.Menu.Tools.App.MessageTest">_Message Test</s:String>
     <s:String x:Key="Main.Menu.Tools.App.ThrowEx">_Throw an Exception</s:String>
-    <s:String x:Key="Main.Menu.Tools.packagemgmt">Manage _Packages of</s:String>
-    <s:String x:Key="Main.Menu.Tools.packagemgmt.py">P_ython</s:String>
-    <s:String x:Key="Main.Menu.Tools.packagemgmt.ide">_IDE</s:String>
+    <s:String x:Key="Main.Menu.Tools.Packagemgmt">Manage _Packages of</s:String>
+    <s:String x:Key="Main.Menu.Tools.Packagemgmt.py">P_ython</s:String>
+    <s:String x:Key="Main.Menu.Tools.Packagemgmt.ide">_IDE</s:String>
     <s:String x:Key="Main.Menu.Help">_Help</s:String>
     <s:String x:Key="Main.Menu.Help.About">_About</s:String>
-    <s:String x:Key="Main.Menu.Help.LC">Licenses and _Copyrights</s:String>
-    <s:String x:Key="Main.Menu.Help.tbox">_Treasure Box</s:String>
+    <s:String x:Key="Main.Menu.Help.Lc">Licenses and _Copyrights</s:String>
+    <s:String x:Key="Main.Menu.Help.Tbox">_Treasure Box</s:String>
 
     <s:String x:Key="Main.SideBar.Notifications.Title">Notifications</s:String>
     <s:String x:Key="Main.SideBar.Project.Title">Project Management</s:String>
@@ -54,6 +54,7 @@
     <s:String x:Key="Main.Bottom.CHL">Current Highlighting Profile:</s:String>
     <s:String x:Key="Main.Bottom.FileSavingTip">Saving File:</s:String>
     <s:String x:Key="Main.Bottom.FileSavingTip.Success">Success.</s:String>
+    <s:String x:Key="Main.Bottom.FileSavingTip.Waiting">Waiting...</s:String>
     <s:String x:Key="Main.Bottom.FileSavingTip.Fail">Fail. Please check log.</s:String>
 
 
@@ -63,16 +64,12 @@
 
     <!--  GotoLine  -->
     <s:String x:Key="GL.Title">Go to Line: (enter line number)</s:String>
-    
-    <!--Wiki-->
-    <s:String x:Key="W.Keyword">Keyword</s:String>
-    <s:String x:Key="W.Func">Function</s:String>
-    <s:String x:Key="W.Pkg">Package</s:String>
-    <s:String x:Key="W.Doc">Documention</s:String>
-    <s:String x:Key="W.Comment">Comments</s:String>
-    <s:String x:Key="W.Comment.Watermark">Leave your comment...</s:String>
-    <s:String x:Key="W.Keyword">Keyword</s:String>
-    <s:String x:Key="W.Keyword">Keyword</s:String>
+
+    <!--  Wiki  -->
+    <s:String x:Key="Wiki.Doc">Documention</s:String>
+    <s:String x:Key="Wiki.Comment">Comments</s:String>
+    <s:String x:Key="Wiki.Comment.Watermark">Leave your comment...</s:String>
+    <s:String x:Key="Wiki.Github">Github Examples</s:String>
 
 
     <!--  Runner Profile Config  -->

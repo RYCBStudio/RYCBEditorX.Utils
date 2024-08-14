@@ -64,6 +64,18 @@ public class LogUtil
         _logWriter.Flush();
     }
 
+    public void LogDebug(object message, EnumLogPort port = EnumLogPort.CLIENT, EnumLogModule module = EnumLogModule.MAIN, string customModuleName = "")
+    {
+        _logWriter.WriteLine("[{0}][{1}|{2}:{3}] {4}",
+            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:FFFFFF"),
+            _translation[EnumLogType.DEBUG],
+            _translation[port],
+            module == EnumLogModule.CUSTOM ? customModuleName : _translation[module],
+            message
+            );
+        _logWriter.Flush();
+    }
+
     public void Error(Exception ex, string message = "", EnumLogType type = EnumLogType.ERROR, EnumLogPort port = EnumLogPort.CLIENT, EnumLogModule module = EnumLogModule.MAIN, string customModuleName = "")
     {
         _logWriter.WriteLine("[{0}][{1}|{2}:{3}] 发生错误：[{4}] {5} {6}",
