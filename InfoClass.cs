@@ -98,7 +98,7 @@ public class Comment
     {
         get; set;
     }
-    public string Likes
+    public int Likes
     {
         get; set;
     }

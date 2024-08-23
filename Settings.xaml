@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="Main">Microsoft YaHei UI</FontFamily>
+    <FontFamily x:Key="MainLight">Microsoft YaHei UI Light</FontFamily>
+    <FontFamily x:Key="CodeCommon">Consolas</FontFamily>
+    <FontFamily x:Key="CodeInner">Jetbrains Mono</FontFamily>
+</ResourceDictionary>

@@ -86,6 +86,46 @@ public class GlobalConfig
     }
 
     /// <summary>
+    /// 指示是否自动保存。
+    /// </summary>
+    public static bool ShouldAutoSave
+    {
+        get; set;
+    }
+    
+    /// <summary>
+    /// 指示是否自动备份。
+    /// </summary>
+    public static bool ShouldAutoBackup
+    {
+        get; set;
+    }
+
+    /// <summary>
+    /// 自动保存的时间间隔。
+    /// </summary>
+    public static int AutoSaveInterval
+    {
+        get; set;
+    }
+
+    /// <summary>
+    /// 自动备份的时间间隔。
+    /// </summary>
+    public static int AutoBackupInterval
+    {
+        get; set;
+    }
+
+    /// <summary>
+    /// 自动备份的路径。
+    /// </summary>
+    public static string AutoBackupPath
+    {
+        get; set;
+    }
+
+    /// <summary>
     /// 代码模板。
     /// </summary>
     public static Dictionary<string, string> CodeTemplates

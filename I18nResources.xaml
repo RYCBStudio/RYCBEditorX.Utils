@@ -7,6 +7,7 @@
     <s:String x:Key="Global.No">No</s:String>
     <s:String x:Key="Global.Ok">OK</s:String>
     <s:String x:Key="Global.Cancel">Cancel</s:String>
+    <s:String x:Key="Copyright">Copyright (c) 2024 RYCB Studio</s:String>
 
 
     <!--  Main  -->

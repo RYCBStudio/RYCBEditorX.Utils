@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.Services.Common;
 
 namespace RYCBEditorX.Utils;
 public static class Extensions
@@ -18,13 +19,31 @@ public static class Extensions
         return Convert.ToBase64String(hash);
     }
 
+    public static string ComputeMd5(this string input)
+    {
+        if (input.IsNullOrEmptyEx())
+        {
+            throw new ArgumentNullException(nameof(input), "Input cannot be null or empty");
+        }
+        var inputBytes = Encoding.UTF8.GetBytes(input);
+
+        // Convert the byte array to a hexadecimal string
+        var sb = new StringBuilder();
+        for (var i = 0; i < MD5.HashData(inputBytes).Length; i++)
+        {
+            sb.Append(MD5.HashData(inputBytes)[i].ToString("x2")); // x2 formats the byte as a two-digit hex number
+        }
+
+        return sb.ToString();
+    }
+
     public static IList<T> RemoveDuplicates<T>(this IList<T> list)
     {
         // 使用 HashSet 来实现去重
-        HashSet<T> seenItems = new HashSet<T>();
-        IList<T> result = new List<T>();
+        var seenItems = new HashSet<T>();
+        IList<T> result = [];
 
-        foreach (T item in list)
+        foreach (var item in list)
         {
             // 如果 HashSet 中不存在该项，则添加到 HashSet 和结果列表
             if (seenItems.Add(item))

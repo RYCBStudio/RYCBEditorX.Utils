@@ -53,13 +53,13 @@ public class EmbeddedWindow : HwndHost, IKeyboardInputSink
     private const uint WM_LBUTTONUP = 0x0202;
     private const int BM_CLICK = 0xF5;
 
-    private Border WndHoster;
-    private double screenW, screenH;
+    private readonly Border WndHoster;
+    private readonly double screenW, screenH;
     private System.Diagnostics.Process appProc;
     private uint oldStyle;
     public IntPtr hwndHost;
-    private string appPath;
-    private ProcessStartInfo processStartInfo;
+    private readonly string appPath;
+    private readonly ProcessStartInfo processStartInfo;
     public EmbeddedWindow(Border b, double sW, double sH, string p, string f)
     {
         WndHoster = b;

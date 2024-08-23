@@ -27,7 +27,7 @@ public class CommentLoader
                 Uid = commentObject.GetProperty("Uid").GetString(),
                 CommentText = commentObject.GetProperty("Comment").GetString(),
                 Time = commentObject.GetProperty("Time").GetString(),
-                Likes = commentObject.GetProperty("Likes").GetString()
+                Likes = commentObject.GetProperty("Likes").GetInt32()
             };
 
             comments.Add(comment);
@@ -35,5 +35,6 @@ public class CommentLoader
 
         return comments;
     }
+
 }
 

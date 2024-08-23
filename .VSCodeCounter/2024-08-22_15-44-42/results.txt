@@ -1,0 +1,42 @@
+Date : 2024-08-22 15:44:42
+Directory : f:\VSProj\repos\RYCBEditorX.Utils
+Total : 16 files,  1003 codes, 83 comments, 126 blanks, all 1212 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         13 |        916 |         77 |        112 |      1,105 |
+| XML      |          2 |         86 |          6 |         12 |        104 |
+| Markdown |          1 |          1 |          0 |          2 |          3 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                          |         16 |      1,003 |         83 |        126 |      1,212 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                   | language | code       | comment    | blank      | total      |
++------------------------------------------------------------+----------+------------+------------+------------+------------+
+| f:\VSProj\repos\RYCBEditorX.Utils\CommentLoader.cs         | C#       |         29 |          2 |          9 |         40 |
+| f:\VSProj\repos\RYCBEditorX.Utils\Converters.cs            | C#       |         25 |          0 |          2 |         27 |
+| f:\VSProj\repos\RYCBEditorX.Utils\EmbeddedWindow.cs        | C#       |        160 |          8 |          9 |        177 |
+| f:\VSProj\repos\RYCBEditorX.Utils\Exceptions.cs            | C#       |         13 |          0 |          5 |         18 |
+| f:\VSProj\repos\RYCBEditorX.Utils\Extensions.cs            | C#       |         54 |         20 |         11 |         85 |
+| f:\VSProj\repos\RYCBEditorX.Utils\FileStructAnalyzer.cs    | C#       |         52 |          1 |          8 |         61 |
+| f:\VSProj\repos\RYCBEditorX.Utils\GlobalConfig.cs          | C#       |        126 |         42 |         28 |        196 |
+| f:\VSProj\repos\RYCBEditorX.Utils\I18nResources.xaml       | XML      |         66 |          6 |         12 |         84 |
+| f:\VSProj\repos\RYCBEditorX.Utils\InfoClass.cs             | C#       |        124 |          0 |         10 |        134 |
+| f:\VSProj\repos\RYCBEditorX.Utils\Json2TreeViewParser.cs   | C#       |         49 |          4 |          8 |         61 |
+| f:\VSProj\repos\RYCBEditorX.Utils\LocalizationService.cs   | C#       |         29 |          0 |          4 |         33 |
+| f:\VSProj\repos\RYCBEditorX.Utils\LogUtil.cs               | C#       |        115 |          0 |          8 |        123 |
+| f:\VSProj\repos\RYCBEditorX.Utils\PypiHelper.cs            | C#       |        126 |          0 |          9 |        135 |
+| f:\VSProj\repos\RYCBEditorX.Utils\README.md                | Markdown |          1 |          0 |          2 |          3 |
+| f:\VSProj\repos\RYCBEditorX.Utils\RYCBEditorX.Utils.csproj | XML      |         20 |          0 |          0 |         20 |
+| f:\VSProj\repos\RYCBEditorX.Utils\UtilsModule.cs           | C#       |         14 |          0 |          1 |         15 |
+| Total                                                      |          |      1,003 |         83 |        126 |      1,212 |
++------------------------------------------------------------+----------+------------+------------+------------+------------+

@@ -8,8 +8,8 @@ namespace RYCBEditorX.Utils;
 public class LogUtil
 {
 
-    private StreamWriter _logWriter;
-    private ManagementClass _managementClass;
+    private readonly StreamWriter _logWriter;
+    private readonly ManagementClass _managementClass;
 
     private readonly Dictionary<Enum, string> _translation = new()
     {
