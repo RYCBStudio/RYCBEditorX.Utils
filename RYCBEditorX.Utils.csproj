@@ -3,6 +3,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
 	  <LangVersion>12.0</LangVersion>
     <UseWPF>true</UseWPF>
+    <UserSecretsId>71f32266-1db3-418d-a7fa-26e35a83c5d4</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.5.1" />
@@ -11,6 +12,7 @@
     <PackageReference Include="IronPython" Version="3.4.1" />
     <PackageReference Include="Markdig" Version="0.37.0" />
     <PackageReference Include="MdXaml" Version="1.27.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="19.225.1" />
     <PackageReference Include="MySql.Data" Version="9.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

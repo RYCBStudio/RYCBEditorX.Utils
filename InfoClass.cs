@@ -9,6 +9,11 @@ public static class GlobalWindows
     {
         get; set;
     }
+
+    public static Window CurrentMainWindow
+    {
+        get; set;
+    }
 }
 
 public static class Language
@@ -99,6 +104,10 @@ public class Comment
         get; set;
     }
     public int Likes
+    {
+        get; set;
+    }
+    public string Target
     {
         get; set;
     }

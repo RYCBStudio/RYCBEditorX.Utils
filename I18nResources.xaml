@@ -43,6 +43,8 @@
     <s:String x:Key="Main.Menu.Help.Lc">Licenses and _Copyrights</s:String>
     <s:String x:Key="Main.Menu.Help.Tbox">_Treasure Box</s:String>
 
+    <s:String x:Key="Main.User.Unlogin">Not Logged In</s:String>
+
     <s:String x:Key="Main.SideBar.Notifications.Title">Notifications</s:String>
     <s:String x:Key="Main.SideBar.Project.Title">Project Management</s:String>
     <s:String x:Key="Main.SideBar.Struct.Title">File Structure</s:String>
@@ -81,5 +83,21 @@
     <s:String x:Key="RPC.Property.ItprArgs">Interpreter Arguments</s:String>
     <s:String x:Key="RPC.Property.ScriptArgs">Script Arguments</s:String>
     <s:String x:Key="RPC.Property.UseBPSR">Use Built-in Python Script Runner</s:String>
+
+    <!--  Login  -->
+    <s:String x:Key="Login.Name">Name</s:String>
+    <s:String x:Key="Login.Pwd">Password</s:String>
+    <s:String x:Key="Login.Login">Login</s:String>
+    <s:String x:Key="Login.Register">Register</s:String>
+    <s:String x:Key="Login.Fail">Invalid name or password.</s:String>
+
+    <!--  Register  -->
+    <s:String x:Key="Register.Name">Name</s:String>
+    <s:String x:Key="Register.Pwd">Password</s:String>
+    <s:String x:Key="Register.ConfirmPwd">Confirm Password</s:String>
+    <s:String x:Key="Register.Register">Register</s:String>
+    <s:String x:Key="Register.Fail">Name already exists.</s:String>
+    <s:String x:Key="Register.IllegalPwd">Illegal password. Requirements: The length is between 8 and 20 bits, including at least one number and one lowercase letter.</s:String>
+    <s:String x:Key="Register.UnmatchedPwd">Password does not match.</s:String>
 
 </ResourceDictionary>
