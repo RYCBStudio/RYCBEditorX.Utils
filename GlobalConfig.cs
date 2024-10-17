@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Media;
@@ -15,7 +16,7 @@ public class GlobalConfig
     {
         get; set;
     }
-    
+
     /// <summary>
     /// 为了调用主包中的REVISION_NUMBER而创建。
     /// </summary>
@@ -62,6 +63,14 @@ public class GlobalConfig
     }
 
     /// <summary>
+    /// Python解释器路径。
+    /// </summary>
+    public static string PythonPath
+    {
+        get; set;
+    }
+
+    /// <summary>
     /// 当前的皮肤。
     /// </summary>
     public static string Skin
@@ -92,7 +101,7 @@ public class GlobalConfig
     {
         get; set;
     }
-    
+
     /// <summary>
     /// 指示是否自动备份。
     /// </summary>
@@ -126,6 +135,22 @@ public class GlobalConfig
     }
 
     /// <summary>
+    /// 本地包。
+    /// </summary>
+    public static Dictionary<string, Dictionary<string, string>> LocalPackages
+    {
+        get; set;
+    }
+
+    /// <summary>
+    /// 本地文档。
+    /// </summary>
+    public static Dictionary<string, string> LocalDocs
+    {
+        get; set;
+    }
+
+    /// <summary>
     /// 代码模板。
     /// </summary>
     public static Dictionary<string, string> CodeTemplates
@@ -134,6 +159,25 @@ public class GlobalConfig
     } = [];
 
     public static string CommonTempFilePath => StartupPath + "Cache\\" + DateTime.Now.Ticks;
+
+    public static class Downloading
+    {
+        /// <summary>
+        /// 指示是否并行下载。
+        /// </summary>
+        public static bool ParallelDownload
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// 并行下载的线程数。
+        /// </summary>
+        public static int ParallelCount
+        {
+            get; set;
+        }
+    }
 
     public static class Editor
     {
@@ -200,36 +244,8 @@ public class GlobalConfig
         get; set;
     }
 
-    public class RunProfile
+    public static Dictionary<string, List<string>> OnlineWikis
     {
-        public string Name
-        {
-            get; set;
-        }
-
-        public string ScriptPath
-        {
-            get; set;
-        }
-
-        public string ScriptArgs
-        {
-            get; set;
-        }
-
-        public string Interpreter
-        {
-            get; set;
-        }
-
-        public string InterpreterArgs
-        {
-            get; set;
-        }
-
-        public bool UseBPSR
-        {
-            get; set;
-        }
+        get; set;
     }
 }

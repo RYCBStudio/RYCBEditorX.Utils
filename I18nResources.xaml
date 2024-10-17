@@ -59,6 +59,11 @@
     <s:String x:Key="Main.Bottom.FileSavingTip.Success">Success.</s:String>
     <s:String x:Key="Main.Bottom.FileSavingTip.Waiting">Waiting...</s:String>
     <s:String x:Key="Main.Bottom.FileSavingTip.Fail">Fail. Please check log.</s:String>
+    <s:String x:Key="Main.Bottom.Update.Download">Download Update</s:String>
+    <s:String x:Key="Main.Bottom.Update.Cancel">Cancel</s:String>
+    <s:String x:Key="Main.Bottom.Update.Downloading">Downloading Update:</s:String>
+    <s:String x:Key="Main.Bottom.Update.Decompressing">Decompressing Archives:</s:String>
+    <s:String x:Key="Main.Bottom.Update.Validating">Validating Archives:</s:String>
 
 
     <!--  File Creator  -->
@@ -67,6 +72,12 @@
 
     <!--  GotoLine  -->
     <s:String x:Key="GL.Title">Go to Line: (enter line number)</s:String>
+
+    <!--  Update  -->
+    <s:String x:Key="Update.HasNew">RYCB Editor X {0} is avaliable now.</s:String>
+    <s:String x:Key="Update.AboutToStopSupport">RYCB Editor X {0}(current version) is about to stop supporting.</s:String>
+    <s:String x:Key="Update.EOL">RYCB Editor X {0}(current version) is no longer supported.</s:String>
+    <s:String x:Key="Update.HasSV">RYCB Editor X {0}(current version) contains security vulnerabilities, please download the latest version!</s:String>
 
     <!--  Wiki  -->
     <s:String x:Key="Wiki.Doc">Documention</s:String>

@@ -16,6 +16,39 @@ public static class GlobalWindows
     }
 }
 
+public class RunProfile
+{
+    public string Name
+    {
+        get; set;
+    }
+
+    public string ScriptPath
+    {
+        get; set;
+    }
+
+    public string ScriptArgs
+    {
+        get; set;
+    }
+
+    public string Interpreter
+    {
+        get; set;
+    }
+
+    public string InterpreterArgs
+    {
+        get; set;
+    }
+
+    public bool UseBPSR
+    {
+        get; set;
+    }
+}
+
 public static class Language
 {
     public static class Python
@@ -49,6 +82,10 @@ public static class Icons
     public const string VARIABLE = "\xe660";
     public const string MAGIC = "\xf03e";
     public const string CT = "\xe76a";
+
+    public const string INFO = "\xe60e";
+    public const string WARN = "\xe6d1";
+    public const string ERROR = "\xeb37";
 }
 
 public enum CompletionDataType

@@ -2,7 +2,9 @@
 
 namespace RYCBEditorX.Utils
 {
-    // 定义一个SQLOperations类，该类是一个属性，用于标记接口上的操作方法
+    /// <summary>
+    /// 定义一个SQLOperations类，该类是一个属性，用于标记接口上的操作方法
+    /// </summary>
     [AttributeUsage(AttributeTargets.Interface)]
     public class SQLOperations : Attribute
     {
@@ -10,7 +12,9 @@ namespace RYCBEditorX.Utils
         public SQLOperations() : base() { }
     }
 
-    // 定义一个SQLCritical类，该类是一个属性，用于标记方法是关键操作
+    /// <summary>
+    /// 定义一个SQLCritical类，该类是一个属性，用于标记方法是关键操作
+    /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
     public class SQLCritical : Attribute
     {
@@ -20,7 +24,9 @@ namespace RYCBEditorX.Utils
 
     public class SQLPrivileges
     {
-        // 定义一个Select属性，用于标记方法为查询方法
+        /// <summary>
+        /// 定义一个Select属性，用于标记方法为查询方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Select : Attribute
         {
@@ -28,7 +34,9 @@ namespace RYCBEditorX.Utils
             public Select() : base() { }
         }
 
-        // 定义一个Insert属性，用于标记方法为插入方法
+        /// <summary>
+        /// 定义一个Insert属性，用于标记方法为插入方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Insert : Attribute
         {
@@ -36,7 +44,9 @@ namespace RYCBEditorX.Utils
             public Insert() : base() { }
         }
 
-        // 定义一个Update属性，用于标记方法为更新方法
+        /// <summary>
+        /// 定义一个Update属性，用于标记方法为更新方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Update : Attribute
         {
@@ -44,7 +54,9 @@ namespace RYCBEditorX.Utils
             public Update() : base() { }
         }
 
-        // 定义一个Delete属性，用于标记方法为删除方法
+        /// <summary>
+        /// 定义一个Delete属性，用于标记方法为删除方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Delete : Attribute
         {
@@ -52,7 +64,9 @@ namespace RYCBEditorX.Utils
             public Delete() : base() { }
         }
 
-        // 定义一个Execute属性，用于标记方法为执行方法
+        /// <summary>
+        /// 定义一个Execute属性，用于标记方法为执行方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Execute : Attribute
         {
@@ -60,7 +74,9 @@ namespace RYCBEditorX.Utils
             public Execute() : base() { }
         }
 
-        // 定义一个Create属性，用于标记方法为创建方法
+        /// <summary>
+        /// 定义一个Create属性，用于标记方法为创建方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class Create : Attribute
         {
@@ -68,7 +84,9 @@ namespace RYCBEditorX.Utils
             public Create() : base() { }
         }
 
-        // 定义一个All属性，用于标记方法为所有方法
+        /// <summary>
+        /// 定义一个All属性，用于标记方法为所有方法
+        /// </summary>
         [AttributeUsage(AttributeTargets.Method)]
         public class All : Attribute
         {
