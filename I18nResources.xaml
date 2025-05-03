@@ -7,7 +7,7 @@
     <s:String x:Key="Global.No">No</s:String>
     <s:String x:Key="Global.Ok">OK</s:String>
     <s:String x:Key="Global.Cancel">Cancel</s:String>
-    <s:String x:Key="Copyright">Copyright (c) 2024 RYCB Studio</s:String>
+    <s:String x:Key="Copyright">Copyright (c) 2025 RYCB Studio</s:String>
 
 
     <!--  Main  -->
@@ -61,7 +61,8 @@
     <s:String x:Key="Main.Bottom.FileSavingTip.Fail">Fail. Please check log.</s:String>
     <s:String x:Key="Main.Bottom.Update.Download">Download Update</s:String>
     <s:String x:Key="Main.Bottom.Update.Cancel">Cancel</s:String>
-    <s:String x:Key="Main.Bottom.Update.Downloading">Downloading Update:</s:String>
+    <s:String x:Key="Main.Bottom.Analyzing">Analyzing code tip descriptions:</s:String>
+    <s:String x:Key="Main.Bottom.Analyzing.Suc">Succeeded in analyzing.</s:String>
     <s:String x:Key="Main.Bottom.Update.Decompressing">Decompressing Archives:</s:String>
     <s:String x:Key="Main.Bottom.Update.Validating">Validating Archives:</s:String>
 

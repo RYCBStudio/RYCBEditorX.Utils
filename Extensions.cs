@@ -29,6 +29,74 @@ public static class Extensions
         return value.EndsWith(right) ? value[..^right.Length] : value;
     }
 
+
+    /// <summary>
+    /// 对于上传至数据库的字段进行转义
+    /// </summary>
+    /// <param name="value">需转义的字段</param>
+    /// <returns>转义后的字段</returns>
+    public static string EscapeDatabaseLanguage(this string value)
+    {
+        return value
+            .Replace("\n", "\\n") //换行符
+            .Replace("\r", "\\r").Replace("\t", "\\t") //制表符
+            .Replace("'", "\uffff") //单引号
+            .Replace("--", "\ufffe") //SQL注释
+            .Replace("DELETE", "\ufffd", StringComparison.OrdinalIgnoreCase) //SQL语句DELETE
+            .Replace("INSERT", "\ufffc", StringComparison.OrdinalIgnoreCase) //SQL语句INSERT
+            .Replace("UPDATE", "\ufffb", StringComparison.OrdinalIgnoreCase) //SQL语句UPDATE
+            .Replace("SELECT", "\ufffa", StringComparison.OrdinalIgnoreCase) //SQL语句SELECT
+            .Replace("DROP", "\ufff9", StringComparison.OrdinalIgnoreCase) //SQL语句DROP
+            .Replace("ALTER", "\ufff8", StringComparison.OrdinalIgnoreCase) //SQL语句ALTER
+            .Replace("CREATE", "\ufff7", StringComparison.OrdinalIgnoreCase) //SQL语句CREATE
+            .Replace("TRUNCATE", "\ufff6", StringComparison.OrdinalIgnoreCase) //SQL语句TRUNCATE
+            .Replace("EXEC", "\ufff5", StringComparison.OrdinalIgnoreCase) //SQL语句EXEC
+            .Replace("UNION", "\ufff4", StringComparison.OrdinalIgnoreCase) //SQL语句UNION
+            .Replace(";", "\ufff3"); //SQL语句结束符
+        ;
+
+    }
+
+    /// <summary>
+    /// 对于上传至数据库的字段进行反转义
+    /// </summary>
+    /// <param name="value">需转义的字段</param>
+    /// <returns>转义后的字段</returns>
+    public static string AntiEscapeDatabaseLanguage(this string value)
+    {
+        return value
+            .AntiReplace("\n", "\\n") //换行符
+            .AntiReplace("\r", "\\r").Replace("\t", "\\t") //制表符
+            .AntiReplace("'", "\uffff") //单引号
+            .AntiReplace("--", "\ufffe") //SQL注释
+            .AntiReplace("DELETE", "\ufffd", StringComparison.OrdinalIgnoreCase) //SQL语句DELETE
+            .AntiReplace("INSERT", "\ufffc", StringComparison.OrdinalIgnoreCase) //SQL语句INSERT
+            .AntiReplace("UPDATE", "\ufffb", StringComparison.OrdinalIgnoreCase) //SQL语句UPDATE
+            .AntiReplace("SELECT", "\ufffa", StringComparison.OrdinalIgnoreCase) //SQL语句SELECT
+            .AntiReplace("DROP", "\ufff9", StringComparison.OrdinalIgnoreCase) //SQL语句DROP
+            .AntiReplace("ALTER", "\ufff8", StringComparison.OrdinalIgnoreCase) //SQL语句ALTER
+            .AntiReplace("CREATE", "\ufff7", StringComparison.OrdinalIgnoreCase) //SQL语句CREATE
+            .AntiReplace("TRUNCATE", "\ufff6", StringComparison.OrdinalIgnoreCase) //SQL语句TRUNCATE
+            .AntiReplace("EXEC", "\ufff5", StringComparison.OrdinalIgnoreCase) //SQL语句EXEC
+            .AntiReplace("UNION", "\ufff4", StringComparison.OrdinalIgnoreCase) //SQL语句UNION
+            .AntiReplace(";", "\ufff3"); //SQL语句结束符
+        ;
+
+    }
+
+    /// <summary>
+    /// 字符串替换
+    /// </summary>
+    /// <param name="str"></param>
+    /// <param name="newValue"></param>
+    /// <param name="oldValue"></param>
+    /// <param name="stringComparison"></param>
+    /// <returns></returns>
+    public static string AntiReplace(this string str, string newValue, string oldValue, StringComparison stringComparison = StringComparison.CurrentCulture)
+    {
+        return str.Replace(newValue, oldValue, stringComparison);
+    }
+
     /// <summary>
     /// 使字符串指定位数的字符大写
     /// </summary>

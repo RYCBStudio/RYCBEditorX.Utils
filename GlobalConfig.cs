@@ -244,6 +244,16 @@ public class GlobalConfig
         get; set;
     }
 
+    public static int CurrentLoadedOnlineIndex
+    {
+        get; set;
+    }
+
+    public static int TotalLoadedOnline
+    {
+        get; set;
+    }
+
     public static Dictionary<string, List<string>> OnlineWikis
     {
         get; set;
