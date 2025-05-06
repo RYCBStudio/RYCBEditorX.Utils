@@ -29,6 +29,19 @@ public static class Extensions
         return value.EndsWith(right) ? value[..^right.Length] : value;
     }
 
+    /// <summary>
+    /// 判断一个<see cref="DateTime"/>是否为七天内的时间
+    /// </summary>
+    /// <param name="dateTime"></param>
+    /// <returns></returns>
+    public static bool IsWithinSevenDays(this DateTime dateTime)
+    {
+        DateTime now = DateTime.Now;
+        TimeSpan difference = dateTime - now;
+
+        // 判断时间差是否在-7天到7天之间
+        return difference.TotalDays >= -7 && difference.TotalDays <= 7;
+    }
 
     /// <summary>
     /// 对于上传至数据库的字段进行转义

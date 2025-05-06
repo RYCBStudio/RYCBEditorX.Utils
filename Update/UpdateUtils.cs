@@ -83,7 +83,7 @@ public class UpdateUtils
     {
         GlobalConfig.CurrentLogger.Log("开始更新", module:EnumLogModule.UPDATE);
         GlobalConfig.CurrentLogger.Log("测试连接", module:EnumLogModule.UPDATE);
-        UpdateCheckOK = await CloudSourceConnectionTester.TestConnection();
+        UpdateCheckOK = CloudSourceConnectionTester.TestConnection();
         if (UpdateCheckOK) {
             GlobalConfig.CurrentLogger.Log("下载更新", module: EnumLogModule.UPDATE);
             await UpdateDownloader.DownloadAsync("https://192.168.1.6/home/rex-root/rex/update.json", "update.json");

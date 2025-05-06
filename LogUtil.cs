@@ -66,6 +66,7 @@ public class LogUtil
 
     public void LogDebug(object message, EnumLogPort port = EnumLogPort.CLIENT, EnumLogModule module = EnumLogModule.MAIN, string customModuleName = "")
     {
+#if DEBUG
         _logWriter.WriteLine("[{0}][{1}|{2}:{3}] {4}",
             DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:FFFFFF"),
             _translation[EnumLogType.DEBUG],
@@ -74,6 +75,7 @@ public class LogUtil
             message
             );
         _logWriter.Flush();
+#endif
     }
 
     public void Error(Exception ex, string message = "", EnumLogType type = EnumLogType.ERROR, EnumLogPort port = EnumLogPort.CLIENT, EnumLogModule module = EnumLogModule.MAIN, string customModuleName = "")
