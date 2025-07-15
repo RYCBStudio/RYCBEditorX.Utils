@@ -53,23 +53,32 @@ public static class Language
 {
     public static class Python
     {
-        public static List<string> Keywords => ["False", "None", "True", "and", "as", "assert", "async", "await", "break", 
+        public static List<string> Keywords => ["False", "None", "True", "and", "as", "assert", "async", "await", "break",
             "class", "continue", "def", "del", "elif", "else", "except", "finally", "for", "from", "global", "if", "import",
             "in", "is", "lambda", "nonlocal", "not", "or", "pass", "raise", "return", "try", "while", "with", "yield"];
         public static List<string> MagicMethods => ["__add__", "__sub__", "__mul__", "__floordiv__", "__div__", "__mod__",
-            "__pow__", "__lshift__", "__rshift__", "__and__", "__xor__", "__or__", "__iadd__", "__isub__", "__imul__", 
-            "__idiv__", "__ifloordiv__", "__imod__", "__ipow__", "__ilshift__", "__irshift__", "__iand__", "__ixor__", 
-            "__ior__", "__neg__", "__pos__", "__abs__", "__invert__", "__complex__", "__int__", "__long__", "__float__", 
+            "__pow__", "__lshift__", "__rshift__", "__and__", "__xor__", "__or__", "__iadd__", "__isub__", "__imul__",
+            "__idiv__", "__ifloordiv__", "__imod__", "__ipow__", "__ilshift__", "__irshift__", "__iand__", "__ixor__",
+            "__ior__", "__neg__", "__pos__", "__abs__", "__invert__", "__complex__", "__int__", "__long__", "__float__",
             "__oct__", "__hex__", "__round__", "__floor__", "__ceil__", "__trunc__", "__lt__", "__le__", "__eq__", "__ne__",
-            "__ge__", "__gt__", "__str__", "__repr__", "__len__", "__hash__", "__nonzero__", "__dir__", "__sizeof__", "__len__", 
+            "__ge__", "__gt__", "__str__", "__repr__", "__len__", "__hash__", "__nonzero__", "__dir__", "__sizeof__", "__len__",
             "__getitem__", "__setitem__", "__delitem__", "__iter__", "__reversed__", "__contains__", "__missing__"];
-        public static List<string> BuiltIns => ["abs", "aiter", "all", "anext", "any", "ascii", "bin", "bool", "breakpoint", 
-            "bytearray", "bytes", "callable", "chr", "classmethod", "compile", "complex", "delattr", "dict", "dir", "divmod", 
-            "enumerate", "eval", "exec", "filter", "float", "format", "frozenset", "getattr", "globals", "hasattr", "hash", 
+        public static List<string> BuiltIns => ["abs", "aiter", "all", "anext", "any", "ascii", "bin", "bool", "breakpoint",
+            "bytearray", "bytes", "callable", "chr", "classmethod", "compile", "complex", "delattr", "dict", "dir", "divmod",
+            "enumerate", "eval", "exec", "filter", "float", "format", "frozenset", "getattr", "globals", "hasattr", "hash",
             "help", "hex", "id", "input", "int", "isinstance", "issubclass", "iter", "len", "list", "locals", "map", "max",
-            "memoryview", "min", "next", "object", "oct", "open", "ord", "pow", "print", "property", "range", "repr", 
-            "reversed", "round", "set", "setattr", "slice", "sorted", "staticmethod", "str", "sum", "super", "tuple", 
+            "memoryview", "min", "next", "object", "oct", "open", "ord", "pow", "print", "property", "range", "repr",
+            "reversed", "round", "set", "setattr", "slice", "sorted", "staticmethod", "str", "sum", "super", "tuple",
             "type", "vars", "zip", "__import__"];
+    }
+
+    public static class Dictionaries
+    {
+        public static Dictionary<string, string> LangDict = new()
+        {
+            {"zh-CN","简体中文" },
+            {"en-US","English" },
+        };
     }
 }
 

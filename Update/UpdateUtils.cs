@@ -1,7 +1,6 @@
 ﻿using System;
 using Downloader;
 using Newtonsoft.Json;
-using static Community.CsharpSqlite.Sqlite3;
 
 namespace RYCBEditorX.Utils.Update;
 internal class UpdateInfo

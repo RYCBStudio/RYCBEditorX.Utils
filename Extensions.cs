@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,6 +15,21 @@ public static class Extensions
     public static bool IsNullOrEmpty(this string value)
     {
         return string.IsNullOrEmpty(value);
+    }
+
+    /// <summary>
+    /// 将字符串的首字母转换为大写
+    /// </summary>
+    /// <param name="value">传入的字符串值</param>
+    /// <returns></returns>
+    public static string ToUpperFirst(this string value)
+    {
+        return value switch
+        {
+            null => null,
+            "" => "",
+            _ => char.ToUpper(value[0]) + value[1..]
+        };
     }
 
     /// <summary>
@@ -36,11 +50,21 @@ public static class Extensions
     /// <returns></returns>
     public static bool IsWithinSevenDays(this DateTime dateTime)
     {
+        return IsWithinSomeDays(dateTime, 7);
+    }
+
+    /// <summary>
+    /// 判断一个<see cref="DateTime"/>是否为<paramref name="n"/>天内的时间
+    /// </summary>
+    /// <param name="dateTime"></param>
+    /// <returns></returns>
+    public static bool IsWithinSomeDays(this DateTime dateTime, int n)
+    {
         DateTime now = DateTime.Now;
         TimeSpan difference = dateTime - now;
 
         // 判断时间差是否在-7天到7天之间
-        return difference.TotalDays >= -7 && difference.TotalDays <= 7;
+        return difference.TotalDays >= -n && difference.TotalDays <= n;
     }
 
     /// <summary>

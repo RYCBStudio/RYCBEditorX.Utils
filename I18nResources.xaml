@@ -43,9 +43,18 @@
     <s:String x:Key="Main.Menu.Help.Lc">Licenses and _Copyrights</s:String>
     <s:String x:Key="Main.Menu.Help.Tbox">_Treasure Box</s:String>
 
+    <s:String x:Key="Main.ToolBar.Run">Run</s:String>
+    <s:String x:Key="Main.ToolBar.Debug">Debug</s:String>
+    <s:String x:Key="Main.ToolBar.Debug.StepIn">Step In</s:String>
+    <s:String x:Key="Main.ToolBar.Debug.StepOver">Step Over</s:String>
+    <s:String x:Key="Main.ToolBar.Debug.StepOut">Step Out</s:String>
+    <s:String x:Key="Main.ToolBar.Stop">Stop</s:String>
+
     <s:String x:Key="Main.User.Unlogin">Not Logged In</s:String>
 
     <s:String x:Key="Main.SideBar.Notifications.Title">Notifications</s:String>
+    <s:String x:Key="Main.SideBar.Notifications.CA">Clear All</s:String>
+    <s:String x:Key="Main.SideBar.Notifications.CS">Clear Selected</s:String>
     <s:String x:Key="Main.SideBar.Project.Title">Project Management</s:String>
     <s:String x:Key="Main.SideBar.Struct.Title">File Structure</s:String>
     <s:String x:Key="Main.SideBar.Pylint.Title">Pylint Settings</s:String>

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using System.Security.Policy;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace RYCBEditorX.Utils.Update;
