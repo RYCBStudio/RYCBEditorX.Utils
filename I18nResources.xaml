@@ -49,6 +49,7 @@
     <s:String x:Key="Main.ToolBar.Debug.StepOver">Step Over</s:String>
     <s:String x:Key="Main.ToolBar.Debug.StepOut">Step Out</s:String>
     <s:String x:Key="Main.ToolBar.Stop">Stop</s:String>
+    <s:String x:Key="Main.ToolBar.NU">No network connection.</s:String>
 
     <s:String x:Key="Main.User.Unlogin">Not Logged In</s:String>
 
@@ -59,6 +60,7 @@
     <s:String x:Key="Main.SideBar.Struct.Title">File Structure</s:String>
     <s:String x:Key="Main.SideBar.Pylint.Title">Pylint Settings</s:String>
     <s:String x:Key="Main.SideBar.Wiki.Title">Wiki</s:String>
+    <s:String x:Key="Main.SideBar.Wiki.ViewCTs">View All Code Templates</s:String>
 
     <s:String x:Key="Main.Bottom.Errors">Errors</s:String>
     <s:String x:Key="Main.Bottom.Console">Console</s:String>

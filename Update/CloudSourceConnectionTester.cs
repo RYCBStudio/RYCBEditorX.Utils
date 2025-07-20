@@ -19,14 +19,14 @@ public class CloudSourceConnectionTester
             var _ = _client.GetAsync("http://101.34.85.14");
             if (_.Result.IsSuccessStatusCode)
             {
-                GlobalConfig.CurrentLogger.Log("连接成功", module: EnumLogModule.UPDATE);
+                GlobalConfig.CurrentLogger?.Log("连接成功", module: EnumLogModule.UPDATE);
                 _status = true;
             }
         }
-        catch (System.Net.WebException ex)
+        catch (Exception ex)
         {
-            GlobalConfig.CurrentLogger.Log("连接失败", module: EnumLogModule.UPDATE);
-            GlobalConfig.CurrentLogger.Error(ex, module: EnumLogModule.UPDATE);
+            GlobalConfig.CurrentLogger?.Log("连接失败", module: EnumLogModule.UPDATE);
+            GlobalConfig.CurrentLogger?.Error(ex, module: EnumLogModule.UPDATE);
             _status = false;
         }
         finally

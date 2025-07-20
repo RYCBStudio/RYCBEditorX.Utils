@@ -13,7 +13,7 @@ internal class UpdateDownloader
     {
         BufferBlockSize = 8000, // 通常，主机最大支持8000字节，默认值为8000。
         ChunkCount = 16, // 要下载的文件分片数量，默认值为1
-        MaxTryAgainOnFailover = 10, // 失败的最大次数
+        MaxTryAgainOnFailure = 10, // 失败的最大次数
         ParallelDownload = Downloading.ParallelDownload, // 下载文件是否为并行的。默认值为false
         ParallelCount = Downloading.ParallelCount,
         Timeout = 2000, // 每个 stream reader  的超时（毫秒），默认值是1000

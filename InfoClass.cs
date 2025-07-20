@@ -3,6 +3,117 @@ using System.Windows;
 
 namespace RYCBEditorX.Utils;
 
+public enum NotificationType
+{
+    Info,
+    Warn,
+    Error
+}
+
+public class AppConfig
+{
+    public string Skin
+    {
+        get; set;
+    }
+    public int MaximumFileSize
+    {
+        get; set;
+    }
+    public string Language
+    {
+        get; set;
+    }
+    public string PythonPath
+    {
+        get; set;
+    }
+    public AutoSaveConfig AutoSave
+    {
+        get; set;
+    }
+    public AutoBackupConfig AutoBackup
+    {
+        get; set;
+    }
+    public string Font
+    {
+        get; set;
+    }
+    public string XshdFilePath
+    {
+        get; set;
+    }
+    public EditorConfig Editor
+    {
+        get; set;
+    }
+    public DownloadingConfig Downloading
+    {
+        get; set;
+    }
+}
+
+public class AutoSaveConfig
+{
+    public bool Enabled
+    {
+        get; set;
+    }
+    public int Interval
+    {
+        get; set;
+    }
+}
+
+public class AutoBackupConfig
+{
+    public bool Enabled
+    {
+        get; set;
+    }
+    public int Interval
+    {
+        get; set;
+    }
+    public string Path
+    {
+        get; set;
+    }
+}
+
+public class EditorConfig
+{
+    public string Theme
+    {
+        get; set;
+    }
+    public bool ShowLineNumber
+    {
+        get; set;
+    }
+    public string FontName
+    {
+        get; set;
+    }
+    public int FontSize
+    {
+        get; set;
+    }
+}
+
+public class DownloadingConfig
+{
+    public bool ParallelDownload
+    {
+        get; set;
+    }
+    public int ParallelCount
+    {
+        get; set;
+    }
+}
+
 public static class GlobalWindows
 {
     public static List<Window> ActivatingWindows
@@ -128,6 +239,39 @@ public class GeneralPackageInfo
     public string Description
     {
         get; set;
+    }
+}
+
+public class CodeTemplate
+{
+    public string Name
+    {
+        get; set;
+    }
+    public string Description
+    {
+        get; set;
+    }
+    public string Template
+    {
+        get; set;
+    }
+    public static void GetTemplate(KeyValuePair<string, string> template, ref List<CodeTemplate> templates)
+    {
+        templates.Add(new()
+        {
+            Name = template.Key,
+            Template = template.Value
+        });
+    }
+    public static CodeTemplate GetTemplate(KeyValuePair<string, string> template, string desc)
+    {
+        return new()
+        {
+            Name = template.Key,
+            Description = desc,
+            Template = template.Value
+        };
     }
 }
 

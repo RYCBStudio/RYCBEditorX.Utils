@@ -257,4 +257,9 @@ public class GlobalConfig
     {
         get; set;
     }
+    public static bool NetworkAvaliable
+    {
+        get;
+        set;
+    }
 }
