@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualBasic.Devices;
 
 namespace RYCBEditorX.Utils.CrashHandling;
@@ -208,58 +205,69 @@ public class CrashHandler
 
     public void CollectCrashInfo()
     {
-       // var LogPath = GlobalConfig.CurrentLogger.logPath;
-        //var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"\\Temp\\RYCB\\IDE\\{FrmMain.LOGGER.logPath.Split('\\')[FrmMain.LOGGER.logPath.Split('\\').Length - 1]}";
         var cpuName = GetCpuName();
         var InnerExceptionProcess = _ex.InnerException != null ? $"""
-                    {_lang_res[GlobalConfig.LocalizationString][0]}: {_ex.InnerException.GetType()}
-                    HResult: {_ex.InnerException.HResult}
-                    {_lang_res[GlobalConfig.LocalizationString][1]}: 
-                    {_ex.InnerException.StackTrace}
-                    """
+                        {_lang_res["zh-CN"][0]}: {_ex.InnerException.GetType()}
+                        HResult: {_ex.InnerException.HResult}
+                        {_lang_res["zh-CN"][1]}: 
+                        {_ex.InnerException.StackTrace}
+                        """
             : "";
-        _resources[GlobalConfig.LocalizationString] = string.Format(_resources[GlobalConfig.LocalizationString],
+
+        _resources["zh-CN"] = string.Format(_resources["zh-CN"],
             _jokes[new Random().Next(0, _jokes.Length - 1)],
             DateTime.Now.TimeOfDay,
             _ex.GetType(),
             _ex.Message,
             _ex.StackTrace,
             new ComputerInfo().OSFullName,
-            File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\RYCB\\IDE\\protect\\time"),
-            "",//满足兼容
-            _port_res[GlobalConfig.LocalizationString][0],
+            "1.0.0", // 替换为实际版本号
+            "0", // 启动参数数量
+            "", // 启动参数
+            "100", // 正常运行时间
+            "", // 额外信息
+            "C:\\Program Files\\YourApp", // 文件路径
+            _port_res["zh-CN"][0], // 类型
             CultureInfo.CurrentCulture.DisplayName,
-            File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\RYCB\\IDE\\protect\\memory"),
+            $"{GC.GetTotalMemory(false) / 1024 / 1024} MB", // 内存占用
             cpuName,
             _ex.InnerException != null,
             InnerExceptionProcess,
             _ex.HResult
-            );
+        );
     }
 
     public bool WriteDumpFile()
     {
         try
         {
-            File.WriteAllText(_path, _resources[GlobalConfig.LocalizationString]);
+            File.WriteAllText(_path, _resources["zh-CN"]);
+            return true;
         }
-        catch { return false; }
-        return true;
+        catch
+        {
+            return false;
+        }
     }
 
-    /// <summary>
-    /// 获取CPU名称信息
-    /// </summary>
-    /// <returns>CPU名称信息</returns>
+    public string GetCrashLog() => _resources["zh-CN"];
+
     public static string GetCpuName()
     {
-        var CPUName = "";
-        var management = new ManagementObjectSearcher("Select * from Win32_Processor");
-        foreach (var baseObject in management.Get())
+        var CPUName = "Unknown CPU";
+        try
         {
-            var managementObject = (ManagementObject)baseObject;
-            CPUName = managementObject["Name"].ToString();
+            var management = new ManagementObjectSearcher("Select * from Win32_Processor");
+            foreach (var baseObject in management.Get())
+            {
+                var managementObject = (ManagementObject)baseObject;
+                CPUName = managementObject["Name"]?.ToString() ?? "Unknown CPU";
+            }
         }
-        return Environment.ProcessorCount.ToString() + "x " + CPUName;
+        catch
+        {
+            // 忽略管理查询错误
+        }
+        return $"{Environment.ProcessorCount}x {CPUName}";
     }
 }

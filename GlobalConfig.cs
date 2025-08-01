@@ -134,6 +134,15 @@ public class GlobalConfig
     }
 
     /// <summary>
+    /// 指示是否是第一次运行。
+    /// </summary>
+    public static bool IsFirstRun
+    {
+        get;
+        set;
+    }
+
+    /// <summary>
     /// 本地包。
     /// </summary>
     public static Dictionary<string, Dictionary<string, string>> LocalPackages

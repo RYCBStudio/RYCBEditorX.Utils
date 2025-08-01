@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace RYCBEditorX.Utils;
@@ -8,6 +9,50 @@ public enum NotificationType
     Info,
     Warn,
     Error
+}
+
+public class CrashError(string message) : Exception(message)
+{
+}
+
+public class PyCodeErr
+{
+    public enum ErrorType
+    {
+        SyntaxError,
+        RuntimeError,
+        ImportError,
+        NameError,
+        TypeError,
+        ValueError,
+        OtherError
+    }
+
+    public ErrorType Type
+    {
+        get; set;
+    }
+    public string Message
+    {
+        get; set;
+    }
+    public int LineNumber
+    {
+        get; set;
+    }
+    public string FilePath
+    {
+        get; set;
+    }
+    public string CodeSnippet
+    {
+        get; set;
+    }
+
+    public override string ToString()
+    {
+        return $"{Type} at line {LineNumber}: {Message}";
+    }
 }
 
 public class AppConfig
@@ -49,6 +94,22 @@ public class AppConfig
         get; set;
     }
     public DownloadingConfig Downloading
+    {
+        get; set;
+    }
+    public CrashConfig CrashHandling
+    {
+        get; set;
+    }
+}
+
+public class CrashConfig
+{
+    public bool Enabled
+    {
+        get; set;
+    }
+    public int Attempts
     {
         get; set;
     }

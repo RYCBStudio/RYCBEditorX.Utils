@@ -35,6 +35,7 @@
     <s:String x:Key="Main.Menu.Tools.App.Exit">_Exit</s:String>
     <s:String x:Key="Main.Menu.Tools.App.MessageTest">_Message Test</s:String>
     <s:String x:Key="Main.Menu.Tools.App.ThrowEx">_Throw an Exception</s:String>
+    <s:String x:Key="Main.Menu.Tools.App.TestCrash">_Crash App</s:String>
     <s:String x:Key="Main.Menu.Tools.Packagemgmt">Manage _Packages of</s:String>
     <s:String x:Key="Main.Menu.Tools.Packagemgmt.py">P_ython</s:String>
     <s:String x:Key="Main.Menu.Tools.Packagemgmt.ide">_IDE</s:String>
@@ -42,6 +43,7 @@
     <s:String x:Key="Main.Menu.Help.About">_About</s:String>
     <s:String x:Key="Main.Menu.Help.Lc">Licenses and _Copyrights</s:String>
     <s:String x:Key="Main.Menu.Help.Tbox">_Treasure Box</s:String>
+    <s:String x:Key="Main.Menu.Help.CommitNew">Commit _new bugs or improments</s:String>
 
     <s:String x:Key="Main.ToolBar.Run">Run</s:String>
     <s:String x:Key="Main.ToolBar.Debug">Debug</s:String>

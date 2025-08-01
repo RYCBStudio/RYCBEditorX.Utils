@@ -10,7 +10,7 @@ public static class PypiHelper
 {
     public static (Dictionary<string, List<string>>, string) ParseLinkWithContent(string html)
     {
-        Dictionary<string, List<string>> res = new();
+        Dictionary<string, List<string>> res = [];
         var doc = new HtmlAgilityPack.HtmlDocument();
         doc.LoadHtml(html);
         var linkNodes = doc.DocumentNode.SelectNodes("//span[@class='package-snippet__name']");

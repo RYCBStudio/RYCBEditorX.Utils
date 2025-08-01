@@ -8,6 +8,27 @@ namespace RYCBEditorX.Utils;
 public static class Extensions
 {
     /// <summary>
+    /// 获取缓存文件路径
+    /// </summary>
+    /// <param name="filename"></param>
+    /// <returns></returns>
+    public static string GetCacheFilePath(string filename, bool create = false)
+    {
+        var _ = System.IO.Path.Combine(GlobalConfig.StartupPath, "Cache", filename);
+        if (create) System.IO.File.Create(_);
+        return _;
+    }
+
+    /// <summary>
+    /// 获取随机文件名
+    /// </summary>
+    /// <returns></returns>
+    public static string GetTempFileName()
+    {
+        return System.IO.Path.GetRandomFileName();
+    }
+
+    /// <summary>
     /// 判断字符串是否为<see langword="null"/>或者<see cref="string.Empty"/>
     /// </summary>
     /// <param name="value">需判断的字符串</param>
